@@ -63,6 +63,7 @@ def chunk_audio(wav_path : str , chunk_minutes : int = 10) -> list:
     
     return chunks
 
+# to download a youtube audio in wav format or convert other format to wav
 def process_input(source: str) -> list:
     if source.startswith("http://") or source.startswith("https://"):
         print("Detected YouTube URL. Downloading audio...")
@@ -76,3 +77,21 @@ def process_input(source: str) -> list:
     print(f"Audio ready — {len(chunks)} chunk(s) created.")
     return chunks
 
+
+def process_uploaded_file(uploaded_file) -> list:
+    # save streamlit upload object  to a temp file
+
+    suffix = os.path.splitext(uploaded_file.name)[-1]
+    with tempfile.NamedTemporaryFile(delete=False,suffix=suffix,dir=DOWNLOAD_DIR) as tmp:
+        tmp.write(uploaded_file.read())
+        tmp_path=tmp.name
+
+    print(f"Saved upload to {tmp_path}, converting to wav")
+    wav_path = convert_to_wav(tmp_path)
+
+    print("CHunking Audio...")
+    chunks = chunk_audio(wav_path)
+
+    print(f"Audio Ready - {len(chunks)} chunk(s) created.")
+
+    return chunks
