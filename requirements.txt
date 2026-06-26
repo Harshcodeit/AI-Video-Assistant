@@ -1,9 +1,9 @@
 # Python >= 3.10
 
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch
-torchvision
-torchaudio
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+torchaudio==2.2.0+cpu
 
 # Audio / Video
 yt-dlp>=2024.4.9
@@ -34,7 +34,7 @@ huggingface-hub>=0.23.0
 tiktoken>=0.7.0
 
 # UI
-streamlit>=1.35.0
+streamlit>=1.37.0
 streamlit-extras>=0.4.0
 watchdog>=4.0.0
 
