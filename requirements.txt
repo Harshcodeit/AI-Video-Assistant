@@ -11,7 +11,8 @@ filelock==3.15.4
 pydub==0.25.1
 
 # Speech-to-Text
-openai-whisper==20231117
+openai-whisper
+setuptools>=69.0.0
 
 # Translation
 deep-translator==1.11.4
