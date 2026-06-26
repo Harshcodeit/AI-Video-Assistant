@@ -1,41 +1,54 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
+
+# PyTorch (CPU only)
 torch==2.2.0+cpu
 torchvision==0.17.0+cpu
 torchaudio==2.2.0+cpu
 
+# Core
+numpy==1.26.4
+requests==2.31.0
+python-dotenv==1.0.1
+tqdm==4.66.4
+
 # Audio
-pydub>=0.25.1
+pydub==0.25.1
 
 # Speech-to-Text
-openai-whisper>=20231117
+openai-whisper==20231117
 
 # Translation
-deep-translator>=1.11.4
+deep-translator==1.11.4
+
+# Transformers / Embeddings (pinned to avoid nn/torch NameError)
+transformers==4.44.2
+tokenizers==0.19.1
+huggingface-hub==0.24.6
+sentence-transformers==3.0.1
+langchain-huggingface==0.0.3
 
 # LangChain
-langchain>=0.3.0
-langchain-core>=0.3.0
-langchain-community>=0.3.0
-langchain-mistralai>=0.2.0
-langchain-chroma>=0.1.0
-langchain-huggingface>=0.1.0
+langchain==0.3.7
+langchain-core==0.3.15
+langchain-community==0.3.7
+langchain-mistralai==0.2.1
+langchain-chroma==0.1.4
+langchain-text-splitters==0.3.2
 
 # LLM
-mistralai>=1.0.0
+mistralai==1.2.1
 
-# RAG
-chromadb>=0.5.0
-transformers==4.44.2
-sentence-transformers==3.0.1
-huggingface-hub>=0.23.0
-tiktoken>=0.7.0
+# RAG / Vector DB
+chromadb==0.5.18
+tiktoken==0.7.0
 
 # UI
-streamlit>=1.37.0
-watchdog>=4.0.0
+streamlit==1.37.0
+watchdog==4.0.2
 
-# Utilities
-python-dotenv>=1.0.0
-numpy>=1.26.0
-tqdm>=4.66.0
-requests>=2.32.0
+# Misc
+typing-extensions==4.12.2
+packaging==24.1
+filelock==3.15.4
+sympy==1.13.1
+networkx==3.3
