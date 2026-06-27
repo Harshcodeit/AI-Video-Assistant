@@ -32,17 +32,20 @@ Answer / Summary
 ```
 
 ---
+
 ## Screenshots
 
 ### Home Page
+
 ![Home](assets/home.png)
 
 ### AI Chat
+
 ![Chat](assets/chat.png)
 
 ### Generated Summary
-![Summary](assets/summary.png)
 
+![Summary](assets/summary.png)
 
 ## 🚀 How It Works
 
@@ -54,3 +57,5 @@ Answer / Summary
 6. The embeddings are stored in an in-memory ChromaDB vector store.
 7. For every user query, the system retrieves the most relevant transcript chunks using semantic similarity search.
 8. The retrieved context is passed to the Sarvam AI LLM, which generates accurate, context-aware responses and summaries.
+
+- yt_dlp was used locally to support downloads from youtube, however youtube reject api calls . Thus skipped it in deployment
