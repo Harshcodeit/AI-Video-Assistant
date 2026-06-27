@@ -32,6 +32,17 @@ Answer / Summary
 ```
 
 ---
+## Screenshots
+
+### Home Page
+![Home](assets/home.png)
+
+### AI Chat
+![Chat](assets/chat.png)
+
+### Generated Summary
+![Summary](assets/summary.png)
+
 
 ## 🚀 How It Works
 
